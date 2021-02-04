@@ -3,7 +3,6 @@ import PropTypes from "prop-types";
 
 import classes from "./Burger.module.css";
 import BurgerIngredient from "./BurgerIngredient/BurgerIngredient";
-import BuildControls from "./BuildControls/BuildControls";
 
 const burger = (props) => {
   let transformedIngredients = Object.keys(props.ingredients)
@@ -22,8 +21,7 @@ const burger = (props) => {
     <div className={classes.Burger}>
       <BurgerIngredient type="bread-top" />
       {transformedIngredients}
-      <BurgerIngredient type="bread-bottom" />
-      <BuildControls />
+      <BurgerIngredient type="bread-bottom" />      
     </div>
   );
 };
